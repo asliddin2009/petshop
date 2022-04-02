@@ -1,25 +1,17 @@
-// window.scrollTo(100, 10000);
-
-window.addEventListener("scroll", () => {
-    let scrollY = window.scrollY
-    if (scrollY == 100 || scrollY == 150 || scrollY == 200 || scrollY == 250 || scrollY == 300 || scrollY == 350 || scrollY == 400) {
-        window.scrollTo(100, 640)
-    } else if (scrollY == 940) {
-        window.scrollTo(940, 1430)
-    }
-})
-
 let burger = document.querySelector('.navbar-button');
 let burgerMenu = document.querySelector('.navbar__list');
 let menu = document.querySelector('.menu');
 let menu_img = document.querySelector('.navbar-button img');
 let menu_x = document.querySelector('.menu_x');
+let bodyy = document.querySelector('body');
 
 burger.addEventListener('click', () => {
     burgerMenu.classList.toggle('active')
+    bodyy.style = `overflow: hidden`
 })
 menu_x.addEventListener('click', () => {
     burgerMenu.classList.remove('active')
+    bodyy.style = `overflow: visibly`
 })
 
 let cards = document.querySelector('.cards'),
